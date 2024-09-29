@@ -165,7 +165,7 @@ We tested the trained policy on multiple initial positions:
 
    ```bash
    git@github.com:rfarell/neural_pmp_lqr.git
-   cd lqr_pmp
+   cd neural_pmp_lqr
    ```
 
 2. **Install Dependencies:**
