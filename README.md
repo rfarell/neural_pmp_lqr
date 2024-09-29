@@ -64,22 +64,20 @@ $$
 The PMP conditions are:
 
 1. **State Dynamics:**
-
-   $$
-   \dot{q}(t) = \frac{\partial H}{\partial p} = A q(t) + B u(t)
-   $$
+$$
+\dot{q}(t) = \frac{\partial H}{\partial p} = A q(t) + B u(t)
+$$
 
 2. **Adjoint Dynamics:**
-
-   $$
-   \dot{p}(t) = -\frac{\partial H}{\partial q} = -R q(t) - A^T p(t)
-   $$
+$$
+\dot{p}(t) = -\frac{\partial H}{\partial q} = -R q(t) - A^T p(t)
+$$
 
 3. **Optimal Control:**
 
-   $$
-   \frac{\partial H}{\partial u} = 0 \implies B^T p(t) + Q u(t) = 0
-   $$
+$$
+\frac{\partial H}{\partial u} = 0 \implies B^T p(t) + Q u(t) = 0
+$$
 
 ### Discretization and Neural Network Training
 
@@ -87,9 +85,9 @@ The PMP conditions are:
 - **Neural Network Policy:** A neural network $F_{\theta}$ maps the initial state $q_0$ to a sequence of control actions $u_0, u_1, ..., u_{T-1}$.
 - **Loss Function:** We define a loss function based on the PMP condition for optimal control:
 
-  $$
-  L(\theta) = \sum_{k=0}^{T-1} \left\| \frac{\partial H}{\partial u}(q_k, p_k, u_k) \right\|
-  $$
+$$
+L(\theta) = \sum_{k=0}^{T-1} \left\| \frac{\partial H}{\partial u}(q_k, p_k, u_k) \right\|
+$$
 
 - **Training Objective:** Minimize $L(\theta)$ to ensure the neural network produces control actions that satisfy the PMP optimality condition.
 
@@ -166,7 +164,7 @@ We tested the trained policy on multiple initial positions:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your_username/lqr_pmp.git
+   git@github.com:rfarell/neural_pmp_lqr.git
    cd lqr_pmp
    ```
 
