@@ -64,20 +64,14 @@ $$
 The PMP conditions are:
 
 1. **State Dynamics:**
-$$
-\dot{q}(t) = \frac{\partial H}{\partial p} = A q(t) + B u(t)
-$$
+$$\dot{q}(t) = \frac{\partial H}{\partial p} = A q(t) + B u(t)$$
 
 2. **Adjoint Dynamics:**
-$$
-\dot{p}(t) = -\frac{\partial H}{\partial q} = -R q(t) - A^T p(t)
-$$
+$$\dot{p}(t) = -\frac{\partial H}{\partial q} = -R q(t) - A^T p(t)$$
 
 3. **Optimal Control:**
 
-$$
-\frac{\partial H}{\partial u} = 0 \implies B^T p(t) + Q u(t) = 0
-$$
+$$\frac{\partial H}{\partial u} = 0 \implies B^T p(t) + Q u(t) = 0$$
 
 ### Discretization and Neural Network Training
 
